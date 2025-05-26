@@ -25,20 +25,14 @@ const App = () => {
       <h1>Book Reader</h1>
       <ul>
         {books.map((book) => (
-        <li key={book.title}>
-        <button onClick={() => handleBookSelect(book)}>
-            {book.title}
-            </button>
-          </li>
+          <li key={book.title}> <button onClick={() => handleBookSelect(book)}> {book.title}</button> </li>
         ))}
       </ul>
       <hr />
       {selectedBook && (
         <div>
           <h2>{selectedBook}</h2>
-          <pre style={{ whiteSpace: "pre-wrap", lineHeight: "1.5" }}>
-            {bookContent}
-          </pre>
+          <p>{bookContent} </p>
         </div>
       )}
     </div>
